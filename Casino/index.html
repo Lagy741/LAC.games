@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAC.games </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hlavní menu -->
+    <header>
+        <h1>LAC.games </h1>
+        <span id="balance">Balance: 1000</span>
+
+
+
+        <nav>
+            <button id="menu-button">Menu</button>
+            <button id="mines-button">Mines</button>
+        </nav>
+    </header>
+
+    <!-- Hlavní stránka s informacemi -->
+    <section id="main-menu" class="page active">
+        <h2>Vítejte v LAC.games </h2>
+        <p>Toto je online kasino, kde můžete hrát různé minihry a vyhrávat peníze!</p>
+        <p>Hra Mines je jednoduchá: Zvolte počet min, nastavte sázku a vyhýbejte se minám pro zvýšení své výhry.</p>
+    </section>
+
+    <!-- Stránka s hrou Mines -->
+    <section id="mines-game" class="page">
+        <div class="game-container">
+            <div class="game-settings">
+                <h2>Hra Mines</h2>
+                <section class="balance-container">
+
+
+                </section>
+
+                <section class="game-settings-form">
+                    <label for="mines">Počet min: </label>
+                    <input type="number" id="mines" min="1" max="24" value="5">
+
+                    <label for="bet">Sázka: </label>
+                    <input type="number" id="bet" min="10" max="1000" value="10">
+
+                    <button id="start-game">Hrát Mines</button>
+                    <button id="withdraw" disabled>Withdraw</button>
+                </section>
+
+                <section class="winnings-display">
+                    <label for="current-winnings">Aktuální výhra: </label>
+                    <span id="current-winnings">0</span> Kč
+                </section>
+
+                <section class="game-message">
+                    <p id="game-message"></p>
+                </section>
+            </div>
+            <div class="game-board" id="game-board">
+                <!-- Dynamicky generovaná mřížka -->
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
